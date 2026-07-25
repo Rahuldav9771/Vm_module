@@ -27,3 +27,15 @@ module "virtual_machine" {
   source          = "../../Modules/Virtual_machine"
   virtual_machine = var.virtual_machine
 }
+
+module "bastion" {
+  depends_on = [module.subnet]
+  source     = "../../Modules/bastion"
+  bastion    = var.bastion
+}
+
+module "application_gateway" {
+  depends_on          = [module.subnet]
+  source              = "../../Modules/application_gateway"
+  application_gateway = var.application_gateway
+}

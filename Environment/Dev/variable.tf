@@ -47,3 +47,9 @@ variable "virtual_machine" {
   
 
 }
+
+variable "bastion" {
+}
+
+variable "application_gateway" {
+}
