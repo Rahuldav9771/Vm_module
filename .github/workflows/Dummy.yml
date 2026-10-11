@@ -40,12 +40,15 @@ jobs:
 
       - name: Verify Azure Login
         run: az account show
-
+        
       - name: Terraform Init
+        working-directory: ./Environment/Dev
         run: terraform init
 
       - name: Terraform Validate
+        working-directory: ./Environment/Dev
         run: terraform validate
 
       - name: Terraform Plan
+        working-directory: ./Environment/Dev
         run: terraform plan
