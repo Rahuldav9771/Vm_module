@@ -12,7 +12,7 @@ module "virtual_network" {
 
 module "subnet" {
   depends_on = [module.virtual_network]
-  source     = "../../Modules/Subnet"
+  source     = "../../Modules/subnet"
   subnet     = var.subnet
 }
 
