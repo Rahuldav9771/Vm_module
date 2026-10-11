@@ -95,4 +95,3 @@ jobs:
           directory: Environment/Dev
           framework: terraform
           soft_fail: true
-```
