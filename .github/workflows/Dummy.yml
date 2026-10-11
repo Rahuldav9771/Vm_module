@@ -16,7 +16,7 @@ permissions:
 jobs:
   terraform:
     name: Terraform Init and Plan
-    runs-on: [self-hosted, stage]
+    runs-on: ubuntu-latest
 
     env:
       ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
@@ -49,3 +49,4 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan
+```
